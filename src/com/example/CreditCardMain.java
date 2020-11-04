@@ -93,12 +93,12 @@ public class CreditCardMain {
     static boolean checkSum(Long cardNumber) {
 
         long reversed = reverse(cardNumber);
-        int odd = sumOdd(reversed);
-        int even = evenSum(reversed);
-        int result = sumOfOddEven(even, odd);
+        int A = sumOdd(reversed);
+        int B = evenSum(reversed);
+        int result = sumOfOddEven(A, B);
         System.out.println("The reversed number is " + reversed);
-        System.out.println("The even number is " + even);
-        System.out.println("The Odd number is " + odd);
+        System.out.println("The even number is " + B);
+        System.out.println("The Odd number is " + A);
         System.out.println("The calculated result is " + result);
         if (result % 10 == 0) {
             return true;
